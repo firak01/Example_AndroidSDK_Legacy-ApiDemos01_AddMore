@@ -92,7 +92,9 @@ public class BitmapMesh extends GraphicsActivity {
                 float dx = cx - x;
                 float dy = cy - y;
                 float dd = dx*dx + dy*dy;
-                float d = FloatMath.sqrt(dd);
+                //FGL Diese Methode wurde wohl in AP Version 23 entfernt
+                //float d = FloatMath.sqrt(dd);
+                float d = (float)Math.sqrt(dd); //FGL: Ersetzt obige Zeile
                 float pull = K / (dd + 0.000001f);
 
                 pull /= (d + 0.000001f);

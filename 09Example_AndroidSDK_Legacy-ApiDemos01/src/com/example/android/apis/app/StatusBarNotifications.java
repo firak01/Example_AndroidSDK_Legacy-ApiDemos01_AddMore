@@ -202,8 +202,8 @@ public class StatusBarNotifications extends Activity {
                 System.currentTimeMillis());
 
         // Set the info for the views that show in the notification panel.
-        notification.setLatestEventInfo(this, getText(R.string.status_bar_notifications_mood_title),
-                       text, makeMoodIntent(moodId));
+      //FGL: Diese Methode wurde wohl in API 23 heraugenommen
+//        notification.setLatestEventInfo(this, getText(R.string.status_bar_notifications_mood_title),      text, makeMoodIntent(moodId));
 
         // Send the notification.
         // We use a layout id because it is a unique number.  We use it later to cancel.
@@ -253,13 +253,14 @@ public class StatusBarNotifications extends Activity {
                 text,                        // the text to display in the ticker
                 System.currentTimeMillis()); // the timestamp for the notification
 
-        notification.setLatestEventInfo(
+      //FGL: Diese Methode wurde wohl in API 23 heraugenommen
+      /*  notification.setLatestEventInfo(
                 this,                        // the context to use
                 getText(R.string.status_bar_notifications_mood_title),
                                              // the title for the notification
                 text,                        // the details to display in the notification
                 contentIntent);              // the contentIntent (see above)
-
+*/
         notification.defaults = defaults;
         
         mNotificationManager.notify(

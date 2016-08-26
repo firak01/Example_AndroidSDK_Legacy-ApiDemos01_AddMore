@@ -37,7 +37,12 @@
     <!-- For android.media.audiofx.Visualizer -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
-    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="17" />
+<!--     <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="17" /> -->
+<!--     FGL: Weil mit dem SDK Manager die 23er Version installiert wurde, gibt es Fehlermeldungen. Darum die Version 23 hier als Zielversion eintragen -->
+<!--          Gleichzeitig noch in den Projekt Eigenschaften für Android "Build Target 6" einstellen. -->
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="23" />
 
     <!-- We will request access to the camera, saying we require a camera
          of some sort but not one with autofocus capability. -->

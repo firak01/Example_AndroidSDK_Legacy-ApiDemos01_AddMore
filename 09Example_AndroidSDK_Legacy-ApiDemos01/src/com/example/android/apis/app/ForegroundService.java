@@ -174,9 +174,9 @@ public class ForegroundService extends Service {
             PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
                     new Intent(this, Controller.class), 0);
 
+            //FGL: Diese Methode wurde wohl in API 23 heraugenommen
             // Set the info for the views that show in the notification panel.
-            notification.setLatestEventInfo(this, getText(R.string.local_service_label),
-                           text, contentIntent);
+            //notification.setLatestEventInfo(this, getText(R.string.local_service_label), text, contentIntent);
             
             startForegroundCompat(R.string.foreground_service_started, notification);
             

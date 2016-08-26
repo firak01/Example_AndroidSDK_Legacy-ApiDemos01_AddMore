@@ -99,6 +99,8 @@ public class AlarmService_Service extends Service {
         // In this sample, we'll use the same text for the ticker and the expanded notification
         CharSequence text = getText(R.string.alarm_service_started);
 
+        
+        //FGL: Mit API 23 wurde wohl notification.setLatestEventInfo(..) abgeschafft. Statt dessen sollte man den unteren Code verwenden      
         // Set the icon, scrolling text and timestamp
         Notification notification = new Notification(R.drawable.stat_sample, text,
                 System.currentTimeMillis());
@@ -107,13 +109,39 @@ public class AlarmService_Service extends Service {
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
                 new Intent(this, AlarmService.class), 0);
 
+        /*
         // Set the info for the views that show in the notification panel.
         notification.setLatestEventInfo(this, getText(R.string.alarm_service_label),
                        text, contentIntent);
+        */
+        
+       
+        //Alternativer Code
+        //FGL: Hier haben wir aber keine MainActiviy, bzw. keine Activity. Es ist wohl so eine Art Dienst.
+        //      Notification.Builder builder = new Notification.Builder(MainActivity.this);                	
+        //builder.setAutoCancel(false);
+        //builder.setTicker("this is ticker text");
+        //builder.setContentTitle("WhatsApp Notification");               
+        //builder.setContentText("You have a new message");
+        //builder.setSmallIcon(R.drawable.ic_launcher);
+        //builder.setContentIntent(pendingIntent);
+        //builder.setOngoing(true);
+        //builder.setSubText("This is subtext...");   //API level 16
+        //builder.setNumber(100);
+        //builder.build();
+
+        //myNotication = builder.getNotification();
+        //manager.notify(11, myNotication);
+        
+        
+                      
 
         // Send the notification.
         // We use a layout id because it is a unique number.  We use it later to cancel.
         mNM.notify(R.string.alarm_service_started, notification);
+        
+        
+        
     }
 
     /**

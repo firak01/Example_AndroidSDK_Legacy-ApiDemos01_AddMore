@@ -40,8 +40,14 @@
             android:layout_height="0dp"
             android:layout_weight="0"/>
 
-        <FrameLayout
+        <!--  FGL: 20160816 original Code auskommentiert und android: entfernt, damit es nach dem AndMore-Plugin Installieren(und erhöhung des SDKs) funktionierte -->
+        <!-- <FrameLayout
             android:id="@+android:id/realtabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/> -->
+        <FrameLayout
+            android:id="@+id/realtabcontent"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"/>

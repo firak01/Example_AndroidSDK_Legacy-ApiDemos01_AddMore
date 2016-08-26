@@ -126,7 +126,9 @@ public class IncomingMessage extends Activity {
                 System.currentTimeMillis());
 
         // Set the info for the views that show in the notification panel.
-        notif.setLatestEventInfo(this, from, message, contentIntent);
+        
+        //FGL: Diese Methode wurde wohl in API 23 heraugenommen
+        //notif.setLatestEventInfo(this, from, message, contentIntent);
 
         // We'll have this notification do the default sound, vibration, and led.
         // Note that if you want any of these behaviors, you should always have
@@ -179,7 +181,8 @@ public class IncomingMessage extends Activity {
                 System.currentTimeMillis());
 
         // Set the info for the views that show in the notification panel.
-        notif.setLatestEventInfo(this, from, message, contentIntent);
+      //FGL: Diese Methode wurde wohl in API 23 heraugenommen
+      //  notif.setLatestEventInfo(this, from, message, contentIntent);
 
         // We'll have this notification do the default sound, vibration, and led.
         // Note that if you want any of these behaviors, you should always have
